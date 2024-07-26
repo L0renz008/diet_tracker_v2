@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import { LightDarkSwitch } from "./components/LightDarkSwitch";
@@ -38,6 +39,7 @@ export default async function RootLayout({
             </div>
           </div>
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
